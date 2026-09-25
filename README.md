@@ -8,6 +8,26 @@ Before a matchmaker shares a candidate, MatchGuard checks the candidate against 
 
 > Built for The Date Crew Product & Tech Generalist assessment. The written answers are in [ASSESSMENT.md](./ASSESSMENT.md).
 
+## Prototype Screenshots
+
+**1. Client preference input**
+
+![Client preference input](docs/screenshots/preferences-input.png)
+
+The matchmaker pastes what the client said in their own words. Structured fields start as *Not specified* until extraction runs.
+
+**2. AI-extracted structured preferences**
+
+![AI-extracted structured preferences](docs/screenshots/preferences-extracted.png)
+
+Groq turns the text into editable fields and flags "definitely" and "don't want" as deal-breakers. Anything the client didn't mention stays *Not specified*.
+
+**3. Candidate matching results**
+
+![Candidate matching results](docs/screenshots/candidate-matches.png)
+
+The deterministic engine checks all 12 candidates against only the stated preferences: 3 recommended, 6 need review, and 3 are blocked by a deal-breaker.
+
 ## Quick start
 
 Requirements: Node.js 20.19 or newer.
