@@ -1,0 +1,14 @@
+{
+  "name": "matchguard",
+  "private": true,
+  "description": "MatchGuard — AI Matchmaker Pre-Check (The Date Crew assessment prototype)",
+  "scripts": {
+    "postinstall": "npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n server,client -c blue,magenta \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix server && npm run build --prefix client",
+    "test": "npm test --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
